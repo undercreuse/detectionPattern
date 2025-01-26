@@ -227,21 +227,7 @@ const ObjectDetectionApp = () => {
             />
           </div>
           <div className="flex space-x-2">
-            <button
-              onClick={captureImage}
-              disabled={isProcessing || !patternService}
-              className="ml-2 p-2 rounded-full bg-primary-lighter hover:bg-white"
-            >
-              {isProcessing ? (
-                <Scan className="w-8 h-8 animate-spin" />
-              ) : !patternService ? (
-                <div className="flex items-center space-x-2">
-                  <Scan className="w-8 h-8 animate-pulse" />
-                </div>
-              ) : (
-                <Camera className="w-8 h-8" />
-              )}
-            </button>
+            
             {capturedImage && (
               <button
                 onClick={handleComparison}
@@ -260,14 +246,7 @@ const ObjectDetectionApp = () => {
             >
               <QrCode className="w-6 h-6 text-white hover:text-primary-lighter" />
             </button>
-            <button
-              onClick={testImageComparison}
-              className="ml-2 p-2 rounded-full bg-primary-lighter hover:bg-white"
-            >
-              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="w-6 h-6 text-white hover:text-primary-lighter">
-                <path d="M12 10v6m0 0l-3-3m3 3l3-3m-3 3H9m0 0a9 9 0 110-18 9 9 0 010 18z"/>
-              </svg>
-            </button>
+            
           </div>
         </div>
 
